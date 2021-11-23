@@ -23,6 +23,8 @@ app.use(express.json())
 // Handle custom routes
 app.use('/api/v1/user', require('./routes/userRoutes'))
 app.use('/api/v1/employee', require('./routes/employeeRoutes'))
+app.use('/api/v1/state', require('./routes/stateRoutes'))
+app.use('/api/v1/department', require('./routes/departmentRoutes'))
 
 // Message from server root
 app.get('/', (req, res, next) => {
