@@ -5,7 +5,7 @@ const tokenValidation = require('../middleware/tokenValidation')
 
 router.post('/new', employeeController.createEmployee)
 
-// router.post('/details', employeeController.getEmployees)
+router.get('/details', employeeController.getEmployees)
 
 router.put('/details', employeeController.updateEmployee)
 

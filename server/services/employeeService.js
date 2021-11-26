@@ -39,21 +39,21 @@ module.exports.createEmployee = async serviceData => {
     }
 }
 
-// // Get Employees
-// module.exports.getEmployees = async serviceData => {
-//     try {
-//         const employees = await Employee.findAll()
+// Get Employees
+module.exports.getEmployees = async serviceData => {
+    try {
+        const employees = await Employee.find()
 
-//         if (!employees) {
-//             throw new Error('No employees in database')
-//         }
+        if (!employees) {
+            throw new Error('No employees in database')
+        }
 
-//         return user.toObject()
-//     } catch (err) {
-//         console.error('Error in employeeService file', err)
-//         throw new Error(err)
-//     }
-// }
+        return employees
+    } catch (err) {
+        console.error('Error in employeeService file', err)
+        throw new Error(err)
+    }
+}
 
 
 // Update Employee

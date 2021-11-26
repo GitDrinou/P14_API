@@ -20,23 +20,23 @@ module.exports.createEmployee = async (req, res) => {
     return res.status(response.status).send(response)
 }
 
-// // Get Employees
-// module.exports.getEmployees = async (req, res) => {
-//     let response = {}
+// Get Employees
+module.exports.getEmployees = async (req, res) => {
+    let response = {}
 
-//     try {
-//         const responseFromService = await employeeService.getEmployees(req)
-//         response.status = 200
-//         response.message = 'Successfully get employee datas'
-//         response.body = responseFromService
-//     } catch (err) {
-//         console.lof('Error in getEmployee from employeeController file')
-//         response.status = 400
-//         response.message = err.message
-//     }
+    try {
+        const responseFromService = await employeeService.getEmployees(req)
+        response.status = 200
+        response.message = 'Successfully get employee datas'
+        response.body = responseFromService
+    } catch (err) {
+        console.log('Error in getEmployee from employeeController file')
+        response.status = 400
+        response.message = err.message
+    }
 
-//     return res.status(response.status).send(response)
-// }
+    return res.status(response.status).send(response)
+}
 
 // Update employee
 module.exports.updateEmployee = async (req, res) => {
