@@ -7,6 +7,8 @@ router.post('/new', employeeController.createEmployee)
 
 router.get('/details', employeeController.getEmployees)
 
+router.post('/details', employeeController.getEmployee)
+
 router.put('/details', employeeController.updateEmployee)
 
 module.exports = router
