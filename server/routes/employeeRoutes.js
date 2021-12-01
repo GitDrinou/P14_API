@@ -7,7 +7,7 @@ router.post('/new', employeeController.createEmployee)
 
 router.get('/details', employeeController.getEmployees)
 
-router.post('/details', employeeController.getEmployee)
+router.post('/details', employeeController.getAnEmployee)
 
 router.put('/details', employeeController.updateEmployee)
 

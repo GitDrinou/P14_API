@@ -55,15 +55,15 @@ module.exports.getEmployees = async serviceData => {
     }
 }
 
-// Get Employee
-module.exports.getEmployee = async serviceData => {
+// Get an Employee
+module.exports.getAnEmployee = async serviceData => {
+    
     try {
-        const employee = await Employee.findOne({id : serviceData.id})
+        const employee = await Employee.findOne({ _id: serviceData.body.id })
 
         if (!employee) {
             throw new Error('Employee not found')
         }
-
         return employee.toObject()
     } catch (err) {
         console.error('Error in employeeService file', err)

@@ -38,12 +38,12 @@ module.exports.getEmployees = async (req, res) => {
     return res.status(response.status).send(response)
 }
 
-// Get Employee
-module.exports.getEmployee = async (req, res) => {
+// Get an Employee
+module.exports.getAnEmployee = async (req, res) => {
     let response = {}
 
     try {
-        const responseFromService = await employeeService.getEmployee(req)
+        const responseFromService = await employeeService.getAnEmployee(req)
         response.status = 200
         response.message = 'Successfully get employee datas'
         response.body = responseFromService
