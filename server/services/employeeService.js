@@ -76,14 +76,14 @@ module.exports.getAnEmployee = async serviceData => {
 module.exports.updateEmployee = async serviceData => {
     try {
         const employee = await Employee.findOneAndUpdate(
-            { id : serviceData.id},
+            { _id: serviceData.body.id},
             {
-                lastName: serviceData,
-                street: serviceData.street,
-                city: serviceData.city,
-                state: serviceData.state,
-                zipCode: serviceData.zipCode,
-                department: serviceData.department
+                lastName: serviceData.body.lastName,
+                street: serviceData.body.street,
+                city: serviceData.body.city,
+                state: serviceData.body.state,
+                zipCode: serviceData.body.zipCode,
+                department: serviceData.body.department
             },
             { new: true}
         )
